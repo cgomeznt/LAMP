@@ -83,7 +83,7 @@ Arranque de los servicios
 
 Los servicios web y de base de datos no arrancan por defecto tras la instalación. Tampoco arrancan cada vez que se inicia el sistema. En un sistema LAMP lo habitual es que los servicios estén disponibles constantemente, así que vamos a realizar la configuración pertinente.
 
-En primer lugar habilitamos los servicios, para que arranquen automáticamente en cada inicio del sistema:
+En primer lugar habilitamos los servicios, para que arranquen automáticamente en cada inicio del sistema::
 
 
 	$ sudo systemctl enable httpd mariadb
