@@ -37,21 +37,11 @@ Configurar los repositorios para MariaDB
 
 La versión de MariaDB incluida en los repositorios oficiales de CentOS 7 es muy antigua (MariaDB 5.5).
 
-Si te interesa, puedes añadir el repositorio para la última versión estable, MariaDB 10.6, o tal vez MariaDB 10.5. Para ello crearemos un nuevo archivo de repositorio, por ejemplo para la versión 10.6 (si te interesa otra versión, sustituye a continuación 10.6 por 10.x, según corresponda)::
+Si te interesa, puedes añadir el repositorio para la última versión estable, MariaDB 10.6, o tal vez MariaDB 10.5::
 
-	$ sudo nano /etc/yum.repos.d/mariadb-10.6.repo
+	curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 
-Y añadimos el siguiente contenido::
 
-	[mariadb]
-	name = MariaDB
-	baseurl = http://yum.mariadb.org/10.6/centos7-amd64
-	gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-	gpgcheck=1
-
-Guardamos los cambios y cerramos el archivo.
-
-Actualización de los repositorios
 Únicamente queda actualizar la información de los repositorios::
 
 	$ sudo yum update -y
